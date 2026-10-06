@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scheme Board — Business & Side Hustle Ideas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Server error banner -->
+  <div id="error-banner" class="error-banner hidden">
+    <span>⚠️ Server unreachable. Showing cached data.</span>
+    <button id="btn-retry" class="btn-sm">Retry</button>
+  </div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-logo">⚡</div>
+      <div class="brand-text">
+        <h1>Scheme Board</h1>
+        <p class="subtitle">Capture, tag, score, connect, and visualize money-making ideas</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <nav class="tabs-nav">
+        <button class="tab-btn active" data-tab="map">🗺️ Map</button>
+        <button class="tab-btn" data-tab="list">📋 List</button>
+        <button class="tab-btn" data-tab="stats">📊 Stats</button>
+      </nav>
+      <button id="btn-new-idea" class="btn btn-primary">+ New Idea</button>
+    </div>
+  </header>
+
+  <!-- Shared Filter Bar -->
+  <section class="filter-bar">
+    <div class="filter-group search-group">
+      <span class="filter-icon">🔍</span>
+      <input type="text" id="filter-search" placeholder="Search ideas, tags, descriptions..." autocomplete="off">
+      <button id="btn-clear-search" class="btn-icon hidden" title="Clear search">&times;</button>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-category">Category:</label>
+      <select id="filter-category">
+        <option value="">All Categories</option>
+        <option value="ai_automation">AI & Automation</option>
+        <option value="digital_product">Digital Product</option>
+        <option value="service">Service</option>
+        <option value="content_media">Content & Media</option>
+        <option value="e_commerce">E-Commerce</option>
+        <option value="trading_investing">Trading & Investing</option>
+        <option value="real_world">Real World</option>
+        <option value="community">Community</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filter-status">Status:</label>
+      <select id="filter-status">
+        <option value="">All Statuses</option>
+        <option value="raw">Raw</option>
+        <option value="developed">Developed</option>
+        <option value="testing">Testing</option>
+        <option value="being_built">Being Built</option>
+        <option value="proven">Proven</option>
+        <option value="dead">Dead</option>
+      </select>
+    </div>
+
+    <div class="filter-group filter-checkbox">
+      <label>
+        <input type="checkbox" id="filter-hide-seeded">
+        <span>Hide seeded</span>
+      </label>
+    </div>
+
+    <div class="filter-meta">
+      <span id="filtered-count-badge" class="count-badge">0 ideas</span>
+      <button id="btn-reset-filters" class="btn-text">Reset</button>
+    </div>
+  </section>
+
+  <!-- Main View Area -->
+  <main class="main-content">
+    <!-- Map Tab -->
+    <div id="tab-map" class="tab-pane active">
+      <div class="map-wrapper">
+        <div class="map-canvas-container">
+          <canvas id="graph-canvas"></canvas>
+          <div id="map-tooltip" class="map-tooltip hidden"></div>
+          
+          <div class="map-controls">
+            <button id="btn-recenter" class="btn-control" title="Recenter Graph">🎯</button>
+            <button id="btn-zoom-in" class="btn-control" title="Zoom In">+</button>
+            <button id="btn-zoom-out" class="btn-control" title="Zoom Out">&minus;</button>
+          </div>
+
+          <div class="map-legend">
+            <div class="legend-title">Connections</div>
+            <div class="legend-items">
+              <span class="legend-item"><span class="legend-dot" style="background:#FF8C42"></span>parallel</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#4CC9F0"></span>complements</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#B5E48C"></span>same_market</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#F25C54"></span>competes</span>
+              <span class="legend-item"><span class="legend-dot" style="background:#B185DB"></span>extends</span>
+            </div>
+            <div class="legend-note">Dashed outline = seeded idea. Node size = opportunity score.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- List Tab -->
+    <div id="tab-list" class="tab-pane">
+      <div class="list-wrapper">
+        <table class="ideas-table" id="ideas-table">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Title & Summary</th>
+              <th style="width: 14%;">Category</th>
+              <th style="width: 13%;">Status</th>
+              <th style="width: 18%;">Tags</th>
+              <th style="width: 13%;">Key Scores</th>
+              <th style="width: 10%;">Age</th>
+            </tr>
+          </thead>
+          <tbody id="ideas-table-body">
+            <!-- Dynamic rows -->
+          </tbody>
+        </table>
+        <div id="list-empty" class="empty-state hidden">No ideas match your filters.</div>
+      </div>
+    </div>
+
+    <!-- Stats Tab -->
+    <div id="tab-stats" class="tab-pane">
+      <div class="stats-wrapper">
+        <!-- Overview summary chips -->
+        <section class="stats-section">
+          <h2>Overview & Status Distribution</h2>
+          <div class="stats-summary-grid">
+            <div class="stat-card">
+              <div class="stat-num" id="stat-total-ideas">0</div>
+              <div class="stat-label">Total Ideas</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="stat-seeded-ideas">0</div>
+              <div class="stat-label">Seeded Ideas</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="stat-connections-count">0</div>
+              <div class="stat-label">Total Connections</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="stat-themes-count">0</div>
+              <div class="stat-label">Active Themes</div>
+            </div>
+          </div>
+
+          <div class="status-chips-container" id="status-chips-container">
+            <!-- 6 zero-filled status chips -->
+          </div>
+
+          <h3 class="subsection-title">Category Distribution</h3>
+          <div class="category-chips-container" id="category-chips-container">
+            <!-- category chips -->
+          </div>
+        </section>
+
+        <!-- Top Opportunities Ranking -->
+        <section class="stats-section">
+          <div class="section-header-flex">
+            <h2>Top Opportunities</h2>
+            <span class="formula-tag">Score = Ceiling + Moat &minus; Capital &minus; Effort &minus; Risk</span>
+          </div>
+          <div class="table-responsive">
+            <table class="ranking-table" id="ranking-table">
+              <thead>
+                <tr>
+                  <th style="width: 6%;">Rank</th>
+                  <th style="width: 25%;">Idea</th>
+                  <th style="width: 14%;">Category</th>
+                  <th style="width: 12%;">Opp. Score</th>
+                  <th style="width: 43%;">Score Breakdown (1-5)</th>
+                </tr>
+              </thead>
+              <tbody id="ranking-table-body">
+                <!-- Top 10 scored ideas -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Connections by Type & Themes -->
+        <div class="stats-split-grid">
+          <section class="stats-section">
+            <h2>Connections by Type</h2>
+            <div class="connection-bars-container" id="connection-bars-container">
+              <!-- 5 ctype bars -->
+            </div>
+          </section>
+
+          <section class="stats-section">
+            <h2>Themes</h2>
+            <div class="table-responsive">
+              <table class="themes-table" id="themes-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Name</th>
+                    <th style="width: 55%;">Description</th>
+                    <th style="width: 20%;">Ideas</th>
+                  </tr>
+                </thead>
+                <tbody id="themes-table-body">
+                  <!-- themes list -->
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+
+        <!-- Recent Analysis Runs -->
+        <section class="stats-section">
+          <h2>Recent Analysis Runs</h2>
+          <div class="table-responsive">
+            <table class="runs-table" id="runs-table">
+              <thead>
+                <tr>
+                  <th style="width: 28%;">Idea</th>
+                  <th style="width: 14%;">Status</th>
+                  <th style="width: 18%;">Timestamp</th>
+                  <th style="width: 40%;">Outcome / Error</th>
+                </tr>
+              </thead>
+              <tbody id="runs-table-body">
+                <!-- Analysis runs -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Right-side Detail Panel (shared by Map, List, Stats) -->
+    <aside id="detail-panel" class="detail-panel hidden">
+      <div class="panel-header">
+        <h3 id="panel-title">Idea Detail</h3>
+        <button id="btn-close-panel" class="btn-icon" title="Close Panel">&times;</button>
+      </div>
+      <div class="panel-body">
+        <div class="panel-meta-row">
+          <span id="panel-category" class="chip chip-category">category</span>
+          <span id="panel-owner" class="chip chip-owner">owner</span>
+          <span id="panel-seeded" class="chip chip-seeded hidden">Seeded</span>
+        </div>
+
+        <div class="panel-field">
+          <label for="panel-status-select">Status:</label>
+          <select id="panel-status-select" class="form-select status-select">
+            <option value="raw">Raw</option>
+            <option value="developed">Developed</option>
+            <option value="testing">Testing</option>
+            <option value="being_built">Being Built</option>
+            <option value="proven">Proven</option>
+            <option value="dead">Dead</option>
+          </select>
+        </div>
+
+        <div class="panel-field" id="panel-summary-field">
+          <label>Summary:</label>
+          <p id="panel-summary" class="panel-text summary-text"></p>
+        </div>
+
+        <div class="panel-field">
+          <label>Raw Pitch:</label>
+          <div id="panel-raw" class="panel-text raw-text"></div>
+        </div>
+
+        <div class="panel-field">
+          <label>Tags (click to filter):</label>
+          <div id="panel-tags" class="tags-container"></div>
+        </div>
+
+        <div class="panel-field">
+          <div class="scores-header">
+            <label>Scores (1–5):</label>
+            <span id="panel-opp-score" class="opp-badge"></span>
+          </div>
+          <div id="panel-scores" class="scores-bars"></div>
+        </div>
+
+        <div class="panel-field">
+          <label>Connections:</label>
+          <div id="panel-connections" class="connections-list"></div>
+        </div>
+
+        <div class="panel-field">
+          <label>Themes:</label>
+          <div id="panel-themes" class="themes-list"></div>
+        </div>
+
+        <div class="panel-footer">
+          <button id="btn-delete-idea" class="btn btn-danger btn-sm">Delete Idea</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- New Idea Modal Form -->
+  <div id="modal-new-idea" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>Pitch New Idea</h2>
+        <button id="btn-close-modal" class="btn-icon">&times;</button>
+      </div>
+      <form id="form-new-idea">
+        <div class="form-group">
+          <label for="input-title">Idea Title *</label>
+          <input type="text" id="input-title" required placeholder="e.g. Automated Municipal Permit Scraper for Pool Builders">
+        </div>
+
+        <div class="form-group">
+          <label for="input-raw">Raw Description / Pitch * (2–4 sentences)</label>
+          <textarea id="input-raw" rows="4" required placeholder="Describe the money-making scheme: what it is, who pays, how much, and how to execute it..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="input-owner">Owner / Pitcher</label>
+            <input type="text" id="input-owner" value="C6" placeholder="Your name / handle">
+          </div>
+          <div class="form-group half">
+            <label for="input-category">Category (optional)</label>
+            <select id="input-category">
+              <option value="">Auto-detect via LLM</option>
+              <option value="ai_automation">AI & Automation</option>
+              <option value="digital_product">Digital Product</option>
+              <option value="service">Service</option>
+              <option value="content_media">Content & Media</option>
+              <option value="e_commerce">E-Commerce</option>
+              <option value="trading_investing">Trading & Investing</option>
+              <option value="real_world">Real World</option>
+              <option value="community">Community</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group half">
+            <label for="input-status">Initial Status</label>
+            <select id="input-status">
+              <option value="raw" selected>Raw</option>
+              <option value="developed">Developed</option>
+              <option value="testing">Testing</option>
+              <option value="being_built">Being Built</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" id="btn-cancel-modal" class="btn btn-secondary">Cancel</button>
+          <button type="submit" id="btn-submit-idea" class="btn btn-primary">Create Idea</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
