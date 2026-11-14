@@ -99,6 +99,13 @@ A small, self-hosted board for collecting business and side-hustle ideas, scorin
 <a href="https://github.com/Hydrocarbon-Forge/mod-factory"><img alt="more: mod-factory" src="https://img.shields.io/badge/repo-mod--factory-24292F?logo=github&logoColor=white"></a>
 </p>
 
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/commits"><img alt="commits list" src="https://img.shields.io/badge/commits-history-F05032?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/branches"><img alt="branches" src="https://img.shields.io/badge/browse-branches-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/tags"><img alt="tags" src="https://img.shields.io/badge/browse-tags-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/issues"><img alt="issues list" src="https://img.shields.io/badge/browse-issues-D73A49?logo=github&logoColor=white"></a>
+</p>
+
 ## What it is
 
 Scheme Board is a single-machine web app. `server.py` runs a JSON API and serves a static site from `site/`. Ideas are stored in SQLite. An optional runner, `analyze.py`, sends each new idea to an OpenAI-compatible chat endpoint, which fills in a summary, category, tags, scores, connections and themes. There is no frontend framework and no build step.
