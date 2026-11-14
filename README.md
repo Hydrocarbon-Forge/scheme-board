@@ -68,6 +68,37 @@ A small, self-hosted board for collecting business and side-hustle ideas, scorin
 
 ---
 
+<!-- decorative: links only -->
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/stargazers"><img alt="star" src="https://img.shields.io/badge/star-this_repo-FFD700?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/fork"><img alt="fork" src="https://img.shields.io/badge/fork-this_repo-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/subscription"><img alt="watch" src="https://img.shields.io/badge/watch-this_repo-0969DA?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/issues/new"><img alt="report an issue" src="https://img.shields.io/badge/report-an_issue-D73A49?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/pulls"><img alt="pull requests" src="https://img.shields.io/badge/open-pull_requests-6F42C1?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/releases"><img alt="releases" src="https://img.shields.io/badge/download-releases-2EA44F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge"><img alt="org" src="https://img.shields.io/badge/Hydrocarbon-Forge-FF9A3C?logo=github&logoColor=white"></a>
+<a href="https://github.com/orgs/Hydrocarbon-Forge/repositories"><img alt="all repos" src="https://img.shields.io/badge/all-repositories-555555?logo=github&logoColor=white"></a>
+</p>
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/serverworks"><img alt="more: serverworks" src="https://img.shields.io/badge/repo-serverworks-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/claude-buddy"><img alt="more: claude-buddy" src="https://img.shields.io/badge/repo-claude--buddy-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/forge-fund"><img alt="more: forge-fund" src="https://img.shields.io/badge/repo-forge--fund-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/claude-openai-server"><img alt="more: claude-openai-server" src="https://img.shields.io/badge/repo-claude--openai--server-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/forge-console"><img alt="more: forge-console" src="https://img.shields.io/badge/repo-forge--console-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/hydrocarbon-forge-website"><img alt="more: hydrocarbon-forge-website" src="https://img.shields.io/badge/repo-hydrocarbon--forge--website-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/forge-os"><img alt="more: forge-os" src="https://img.shields.io/badge/repo-forge--os-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/wonder-sprout"><img alt="more: wonder-sprout" src="https://img.shields.io/badge/repo-wonder--sprout-24292F?logo=github&logoColor=white"></a>
+</p>
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/road-to-100-grand"><img alt="more: road-to-100-grand" src="https://img.shields.io/badge/repo-road--to--100--grand-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/larpos"><img alt="more: larpos" src="https://img.shields.io/badge/repo-larpos-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/monecraft-baking"><img alt="more: monecraft-baking" src="https://img.shields.io/badge/repo-monecraft--baking-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/forge-activity"><img alt="more: forge-activity" src="https://img.shields.io/badge/repo-forge--activity-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/forge-office"><img alt="more: forge-office" src="https://img.shields.io/badge/repo-forge--office-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/intelligent-mastermind"><img alt="more: intelligent-mastermind" src="https://img.shields.io/badge/repo-intelligent--mastermind-24292F?logo=github&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/mod-factory"><img alt="more: mod-factory" src="https://img.shields.io/badge/repo-mod--factory-24292F?logo=github&logoColor=white"></a>
+</p>
+
 ## What it is
 
 Scheme Board is a single-machine web app. `server.py` runs a JSON API and serves a static site from `site/`. Ideas are stored in SQLite. An optional runner, `analyze.py`, sends each new idea to an OpenAI-compatible chat endpoint, which fills in a summary, category, tags, scores, connections and themes. There is no frontend framework and no build step.
