@@ -3,6 +3,40 @@
 <p align="center"><b>Capture, tag, score, connect and visualize money-making ideas.</b></p>
 
 <p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/issues?q=is%3Aclosed"><img alt="closed issues" src="https://img.shields.io/github/issues-closed/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/pulls?q=is%3Apr+is%3Aclosed"><img alt="closed pull requests" src="https://img.shields.io/github/issues-pr-closed/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board#readme"><img alt="README" src="https://img.shields.io/badge/README-present-2ea44f?logo=readme&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="tests" src="https://img.shields.io/badge/tests-test_files_in_repo-2ea44f"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/search?l=python"><img alt="language: Python" src="https://img.shields.io/badge/Python-language-3776AB?logo=python&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/search?l=javascript"><img alt="language: JavaScript" src="https://img.shields.io/badge/JavaScript-language-F7DF1E?logo=javascript&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/search?l=css"><img alt="language: CSS" src="https://img.shields.io/badge/CSS-language-1572B6?logo=css3&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/search?l=html"><img alt="language: HTML" src="https://img.shields.io/badge/HTML-language-E34F26?logo=html5&logoColor=white"></a>
+</p>
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/search?l=shell"><img alt="language: Shell" src="https://img.shields.io/badge/Shell-language-4EAA25?logo=gnubash&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains Markdown" src="https://img.shields.io/badge/Markdown-files-000000?logo=markdown&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains SQLite" src="https://img.shields.io/badge/SQLite-files-003B57?logo=sqlite&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains gitignore" src="https://img.shields.io/badge/gitignore-files-F05032?logo=git&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains Shell_script" src="https://img.shields.io/badge/Shell__script-files-4EAA25?logo=gnubash&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains HTML" src="https://img.shields.io/badge/HTML-files-E34F26?logo=html5&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains CSS" src="https://img.shields.io/badge/CSS-files-1572B6?logo=css3&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains JavaScript" src="https://img.shields.io/badge/JavaScript-files-F7DF1E?logo=javascript&logoColor=white"></a>
+</p>
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="contains Python" src="https://img.shields.io/badge/Python-files-3776AB?logo=python&logoColor=white"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/canvas"><img alt="topic: canvas" src="https://img.shields.io/badge/canvas-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/llm"><img alt="topic: llm" src="https://img.shields.io/badge/llm-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/opportunity-scoring"><img alt="topic: opportunity-scoring" src="https://img.shields.io/badge/opportunity--scoring-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/python"><img alt="topic: python" src="https://img.shields.io/badge/python-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/sqlite"><img alt="topic: sqlite" src="https://img.shields.io/badge/sqlite-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/topics/vanilla-js"><img alt="topic: vanilla-js" src="https://img.shields.io/badge/vanilla--js-topic-0969da"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="Git" src="https://img.shields.io/badge/Git-version_control-F05032?logo=git&logoColor=white"></a>
+</p>
+<p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-hosted-181717?logo=github&logoColor=white"></a>
+</p>
+
+<p align="center">
 <a href="https://github.com/Hydrocarbon-Forge/scheme-board/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/Hydrocarbon-Forge/scheme-board?style=social"></a>
 <a href="https://github.com/Hydrocarbon-Forge/scheme-board/forks"><img alt="forks" src="https://img.shields.io/github/forks/Hydrocarbon-Forge/scheme-board?style=social"></a>
 <a href="https://github.com/Hydrocarbon-Forge/scheme-board/watchers"><img alt="watchers" src="https://img.shields.io/github/watchers/Hydrocarbon-Forge/scheme-board?style=social"></a>
