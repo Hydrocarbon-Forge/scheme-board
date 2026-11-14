@@ -1,3 +1,11 @@
+<p align="center"><b>Capture, tag, score, connect and visualize money-making ideas.</b></p>
+
+<p align="center">
+<a href="LICENSE"><img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-blue"></a>
+</p>
+
+---
+
 # Scheme Board
 
 Capture, tag, score, connect, and visualize money-making ideas.
