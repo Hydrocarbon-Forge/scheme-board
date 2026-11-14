@@ -3,6 +3,24 @@
 <p align="center"><b>Capture, tag, score, connect and visualize money-making ideas.</b></p>
 
 <p align="center">
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/stargazers"><img alt="stars" src="https://img.shields.io/github/stars/Hydrocarbon-Forge/scheme-board?style=social"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/forks"><img alt="forks" src="https://img.shields.io/github/forks/Hydrocarbon-Forge/scheme-board?style=social"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/watchers"><img alt="watchers" src="https://img.shields.io/github/watchers/Hydrocarbon-Forge/scheme-board?style=social"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/issues"><img alt="open issues" src="https://img.shields.io/github/issues/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/pulls"><img alt="open pull requests" src="https://img.shields.io/github/issues-pr/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/commits"><img alt="last commit" src="https://img.shields.io/github/last-commit/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/commits"><img alt="commits per year" src="https://img.shields.io/github/commit-activity/Hydrocarbon-Forge/scheme-board/y"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/graphs/contributors"><img alt="contributors" src="https://img.shields.io/github/contributors/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="repo size" src="https://img.shields.io/github/repo-size/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="code size" src="https://img.shields.io/github/languages/code-size/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="top language" src="https://img.shields.io/github/languages/top/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board"><img alt="language count" src="https://img.shields.io/github/languages/count/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/releases"><img alt="latest release" src="https://img.shields.io/github/v/Hydrocarbon-Forge/scheme-board?include_prereleases"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/Hydrocarbon-Forge/scheme-board"></a>
+<a href="https://github.com/Hydrocarbon-Forge/scheme-board/releases"><img alt="release downloads" src="https://img.shields.io/github/downloads/Hydrocarbon-Forge/scheme-board/total"></a>
+</p>
+
+<p align="center">
 A small, self-hosted board for collecting business and side-hustle ideas, scoring them, and seeing how they relate. Python standard library and SQLite only.
 </p>
 
